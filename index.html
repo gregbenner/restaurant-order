@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css">
+  <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/css/app.css">
+</head>
+
+<body>
+  
+  <div class="container">
+
+  <header>
+    <h2>Menu</h2>
+  </header>
+
+  <article class="cf">
+
+    <div class='totals-hold'>
+      <script id="totals" type="text/x-handlebars-template">
+        <div class="total diner-1">
+          {{total1}}
+        </div>
+        <div class="total diner-1">
+          {{total2}}
+        </div>
+      </script>
+    </div>
+    
+    <div class="left-menu menu-hold" data-diner='1'></div>
+    <div class="right-menu menu-hold" data-diner='2'></div>
+    <script id="menu-template" type="text/x-handlebars-template">
+      <ul class="menu">
+        {{#menuitems}}
+        <li class="menuitem">
+          <span class="name">{{name}}</span> £<span class="price">{{price}}</span> <br>
+          <label>add to order? <input type="checkbox"></label>
+        </li>
+         {{/menuitems}}
+      </ul>
+    </script>
+   
+  </article>
+
+  <footer>
+
+  </footer>
+
+  </div>
+  
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/zepto/1.1.4/zepto.min.js"></script>
+  <script src="public/all.min.js"></script>
+</body>
+</html>
